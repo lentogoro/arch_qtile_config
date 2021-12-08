@@ -30,16 +30,18 @@ pip -install qtile
 sudo pacman -Syy alacritty nitrogen thunar firefox geany lightdm lightdm-gtk-greeter picom lxappearance arc-gtk-theme arc-icon-theme archlinux-wallpaper
 
 # Configure before reboot
+cp /etc/X11/xinit/xinitrc to ~/.xinitrc
+vim .xinitrc
 
-# cd .xinitrc
+# remove twm &
+# remove xclock -geometry 50x50-1+1 &
+# remove xterm -geometry 80x50+494+51 &
+# remove xterm -geometry 80x20+494-0 &
 
-# From there you can start a DE or WM. So cp /etc/X11/xinit/xinitrc to ~/.xinitrc and at the end of that file put something like: exec startplasma-x11 or whatever you use. I would also remove these lines from that file, since are useless:
-# twm &
-# xclock -geometry 50x50-1+1 &
-# xterm -geometry 80x50+494+51 &
-# xterm -geometry 80x20+494-0 &
-
-# Then after login, just run startx or put it in your shell's startup file, so that it would start automatically. See here! for more info.
+nitrogen --restore &
+picom &
 
 # https://wiki.archlinux.org/title/Xinit#Autostart_X_at_login
 
+# "startx" in terminal
+# qtile start in terminal
