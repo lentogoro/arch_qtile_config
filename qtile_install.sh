@@ -3,8 +3,6 @@ sudo pacman -S python
 
 sudo pacman python-pip git
 
-sleep 3
-
 #install yay
 pacman -S --needed git base-devel #not sure what --needed is...
 git clone https://aur.archlinux.org/yay.git
