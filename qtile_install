@@ -15,8 +15,6 @@ pip install cffi
 
 pacman -Ss xf86-server xorg-apps xcffib
 
-sleep 1
-
 pip -m install --no-cache-dir cairocffi
 
 pacman -S pango dbus
